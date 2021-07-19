@@ -1,0 +1,20 @@
+def updataTree(index, val)
+    segmentTree[segmentDataStart + index] = val
+    index = segmentDataStart + index
+    while index  0 
+        par = index  2
+        segmentTree[par] = segmentTree[par  2] + segmentTree[par  2 + 1]
+        index = 2
+
+
+def findNumFromTree(node, nodest, nodeen, targetst, targeten)
+    if(targeten  nodest or nodeen  targetst)
+        return 0
+    elif(targetst = nodest and nodeen = targeten)
+        return segmentTree[node]
+    
+    mid = (nodest + nodeen)  2
+
+    return findNumFromTree(node  2, nodest, mid, targetst, targeten) + findNumFromTree(node  2 + 1, mid + 1, nodeen, targetst, targeten)
+
+dictionary 과정을 깊게 이해하자.
