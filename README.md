@@ -1,2 +1,5 @@
 # coding_test
-Record of coding_test study
+
+| directory | number | comment |
+| combination | 1010.py | 다리연결 |
+
